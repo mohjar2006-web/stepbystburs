@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المنحة التركية 2024</title>
+    
+    <!-- استدعاء خط Cairo للعربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- استدعاء Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- استدعاء مكتبة الأيقونات Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        /* إخفاء العناصر غير النشطة */
+        .step-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .step-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-32">
+
+    <div class="max-w-5xl mx-auto p-4 md:p-8 space-y-8">
+        
+        <!-- Navigation Header -->
+        <nav class="sticky top-4 z-50 flex flex-col md:flex-row justify-between items-center gap-6 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100">
+            <div class="flex items-center gap-3 px-2">
+                <div class="bg-[#c21139] p-2.5 rounded-xl text-white shadow-lg shadow-[#c21139]/30">
+                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                </div>
+                <h1 class="font-black text-xl tracking-tight text-slate-900 hidden lg:block">دليل المنحة <span class="text-[#c21139]">2024</span></h1>
+            </div>
+            
+            <div class="flex bg-slate-100/50 p-1.5 rounded-xl overflow-x-auto max-w-full gap-1" id="nav-buttons">
+                <!-- أزرار التنقل سيتم تفعيلها بالجافاسكربت -->
+                <button onclick="goToStep(1)" class="nav-btn active flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap bg-white text-[#c21139] shadow-md ring-1 ring-slate-100" id="btn-1">
+                    <i data-lucide="mouse-pointer-2" class="w-4 h-4"></i>
+                    <span class="hidden md:inline">تقديم الطلب</span>
+                </button>
+                <button onclick="goToStep(2)" class="nav-btn flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap text-slate-500 hover:text-slate-700 hover:bg-white/50" id="btn-2">
+                    <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                    <span class="hidden md:inline">شروط التقديم</span>
+                </button>
+                <button onclick="goToStep(3)" class="nav-btn flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap text-slate-500 hover:text-slate-700 hover:bg-white/50" id="btn-3">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span class="hidden md:inline">اختيار التخصصات</span>
+                </button>
+                <button onclick="goToStep(4)" class="nav-btn flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap text-slate-500 hover:text-slate-700 hover:bg-white/50" id="btn-4">
+                    <i data-lucide="lightbulb" class="w-4 h-4"></i>
+                    <span class="hidden md:inline">نصائح استراتيجية</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Container -->
+        <main id="main-content">
+
+            <!-- STEP 1 -->
+            <div id="step-1" class="step-content active space-y-8">
+                <div class="bg-[#c21139] text-white p-6 rounded-3xl shadow-lg flex items-center justify-between relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-2">المرحلة الأولى: تقديم الطلب</h2>
+                        <p className="opacity-90 text-sm">خطوات البدء واختيار البرنامج المناسب</p>
+                    </div>
+                    <i data-lucide="mouse-pointer-2" class="w-16 h-16 opacity-10 absolute -left-4 -bottom-4 rotate-12"></i>
+                </div>
+
+                <div class="bg-[#c21139]/5 border-r-4 border-[#c21139] p-6 rounded-2xl shadow-sm">
+                    <h2 class="text-lg font-black text-[#c21139] mb-4 flex items-center gap-2">
+                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                        ملاحظات هامة جداً (قبل البدء)
+                    </h2>
+                    <ul class="space-y-3 text-slate-700 font-medium text-sm leading-relaxed list-disc list-inside">
+                        <li>إذا لم تقم بتعبئة المعلومات الإجبارية، <span class="font-bold text-[#c21139]">فلن تظهر لك أي برامج</span>. راجع معلوماتك أولاً.</li>
+                        <li>عند البدء في الطلب، <span class="font-bold text-[#c21139]">لن يمكنك تعديل بياناتك الشخصية</span>. تأكد منها الآن.</li>
+                        <li>للتعديل لاحقاً، ستضطر إلى <span class="underline decoration-[#c21139]">مسح الطلب بالكامل</span> والبدء مجدداً.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden flex flex-col lg:flex-row">
+                        <div class="p-8 lg:w-1/3 flex flex-col gap-4 border-b lg:border-b-0 lg:border-l border-slate-100">
+                            <div class="w-10 h-10 rounded-full bg-[#c21139] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-[#c21139]/20">1</div>
+                            <h4 class="font-bold text-xl text-slate-900">اختيار البرنامج</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">من تبويب "الصفحة الرئيسية"، ستظهر لك الخيارات. حدد المرحلة (بكالوريوس، ماجستير، دكتوراه، بحوث).</p>
+                            <div class="mt-auto">
+                                <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#c21139]/10 text-[#c21139] rounded-xl font-bold text-sm">
+                                    <i data-lucide="mouse-pointer-2" class="w-4 h-4"></i>
+                                    اضغط "تقديم طلب"
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-2/3 bg-slate-50 min-h-[300px] flex items-center justify-center p-8 border-r border-slate-100">
+                             <div class="border-2 border-dashed border-slate-300 rounded-2xl w-full h-full flex flex-col items-center justify-center text-slate-400 gap-2 min-h-[250px]">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                   <span class="text-xs font-bold text-slate-300">IMG</span>
+                                </div>
+                                <span class="text-sm font-medium">مساحة مخصصة لصورة: اختيار البرنامج</span>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden flex flex-col lg:flex-row">
+                        <div class="p-8 lg:w-1/3 flex flex-col gap-4 border-b lg:border-b-0 lg:border-l border-slate-100">
+                            <div class="w-10 h-10 rounded-full bg-[#c21139] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-[#c21139]/20">2</div>
+                            <h4 class="font-bold text-xl text-slate-900">تحديد الحالة الحالية</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">ستظهر نافذة منبثقة. اختر حالتك بدقة (مثال: "بدأت التدريب على مستوى أعلى").</p>
+                            <div class="mt-auto">
+                                <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-xl font-bold text-sm border border-green-100">
+                                    <i data-lucide="save" class="w-4 h-4"></i>
+                                    اضغط زر "حفظ"
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-2/3 bg-slate-50 min-h-[300px] flex items-center justify-center p-8 border-r border-slate-100">
+                             <div class="border-2 border-dashed border-slate-300 rounded-2xl w-full h-full flex flex-col items-center justify-center text-slate-400 gap-2 min-h-[250px]">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                   <span class="text-xs font-bold text-slate-300">IMG</span>
+                                </div>
+                                <span class="text-sm font-medium">مساحة مخصصة لصورة: القائمة المنسدلة للحالة</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div id="step-2" class="step-content space-y-8">
+                <div class="bg-[#c21139] text-white p-6 rounded-3xl shadow-lg flex items-center justify-between relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-2">المرحلة الثانية: شروط التقديم</h2>
+                        <p class="opacity-90 text-sm">مراجعة الشروط والموافقة عليها</p>
+                    </div>
+                    <i data-lucide="clipboard-check" class="w-16 h-16 opacity-10 absolute -left-4 -bottom-4 rotate-12"></i>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Condition 1 -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                        <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-[#c21139] text-white flex items-center justify-center font-bold">3</div>
+                                <h3 class="font-bold text-lg text-slate-800">نافذة الشروط الأولية</h3>
+                            </div>
+                            <div class="px-3 py-1 bg-[#c21139]/10 text-[#c21139] text-xs font-bold rounded-full">رسالة تنبيه</div>
+                        </div>
+                        <div class="p-8 flex flex-col lg:flex-row gap-8">
+                            <div class="lg:w-1/3 space-y-4">
+                                <p class="text-slate-600 text-sm leading-relaxed">بعد الحفظ، ستظهر رسالة تنبيه تحتوي على شروط عامة.</p>
+                                <div class="flex items-center gap-2 font-bold text-slate-900">
+                                    <i data-lucide="mouse-pointer-2" class="w-5 h-5 text-[#c21139]"></i>
+                                    المطلوب: اضغط "أقبل وأوافق"
+                                </div>
+                            </div>
+                            <div class="lg:w-2/3 min-h-[250px] border-2 border-dashed border-slate-200 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400">
+                                مساحة صورة: نافذة الشروط الأولية
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Condition 2 -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                        <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-[#c21139] text-white flex items-center justify-center font-bold">4</div>
+                                <h3 class="font-bold text-lg text-slate-800">الشروط النهائية والإقرار</h3>
+                            </div>
+                            <div class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">خطوة إلزامية</div>
+                        </div>
+                        <div class="p-8 flex flex-col lg:flex-row gap-8">
+                            <div class="lg:w-1/3 space-y-4">
+                                <p class="text-slate-600 text-sm leading-relaxed">ستظهر لك صفحة الشروط كاملة. في أسفل الصفحة:</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex gap-2">
+                                        <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 shrink-0"></i>
+                                        <span>ضع إشارة (✓) عند: "قرأت كل الشروط وأوافق عليها".</span>
+                                    </li>
+                                    <li class="flex gap-2">
+                                        <i data-lucide="save" class="w-5 h-5 text-[#c21139] shrink-0"></i>
+                                        <span>اضغط على زر "حفظ".</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:w-2/3 min-h-[250px] border-2 border-dashed border-slate-200 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400">
+                                مساحة صورة: صفحة الشروط وخانة الاختيار
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div id="step-3" class="step-content space-y-8">
+                <div class="bg-[#c21139] text-white p-6 rounded-3xl shadow-lg flex items-center justify-between relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-2">المرحلة الثالثة: اختيار التخصصات</h2>
+                        <p class="opacity-90 text-sm">إضافة الرغبات وترتيب الأولويات</p>
+                    </div>
+                    <i data-lucide="book-open" class="w-16 h-16 opacity-10 absolute -left-4 -bottom-4 rotate-12"></i>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Add Majors -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="p-6 border-b border-slate-100 bg-slate-50 flex items-center gap-3">
+                            <div class="p-2 bg-[#c21139]/10 rounded-lg text-[#c21139]"><i data-lucide="plus-circle" class="w-6 h-6"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">1. إضافة تخصص جديد</h3>
+                        </div>
+                        <div class="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div class="space-y-4 order-2 lg:order-1">
+                                <h4 class="font-bold text-slate-800">خطوات الإضافة:</h4>
+                                <ul class="space-y-3 text-sm text-slate-600 list-disc list-inside leading-loose">
+                                    <li>اضغط زر <span class="font-bold text-[#c21139] bg-[#c21139]/5 px-2 rounded">"إضافة"</span> لفتح القائمة.</li>
+                                    <li>اختر التخصص لرؤية تفاصيله (الجامعة، اللغة، المدينة).</li>
+                                    <li>اضغط على <span class="font-bold">الدائرة (+)</span> يمين التخصص لإضافته.</li>
+                                    <li>اضغط زر <span class="font-bold">"حفظ"</span> أسفل القائمة.</li>
+                                    <li>كرر العملية لإضافة رغبات أخرى.</li>
+                                </ul>
+                            </div>
+                            <div class="order-1 lg:order-2 min-h-[300px] border-2 border-dashed border-slate-200 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400">
+                                مساحة صورة: قائمة التخصصات وزر الإضافة
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reorder -->
+                    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="p-6 border-b border-slate-100 bg-slate-50 flex items-center gap-3">
+                            <div class="p-2 bg-blue-50 rounded-lg text-blue-600"><i data-lucide="arrow-up-down" class="w-6 h-6"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">2. ترتيب الأولويات</h3>
+                        </div>
+                        <div class="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div class="space-y-4 order-2 lg:order-1">
+                                <h4 class="font-bold text-slate-800">كيف ترتب رغباتك؟</h4>
+                                <p class="text-sm text-slate-600 leading-relaxed">ستظهر لك القائمة بالتخصصات التي اخترتها. الترتيب مهم جداً لأن المنحة تنظر للرغبة الأولى ثم الثانية وهكذا.</p>
+                                <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 text-sm text-blue-800 flex items-center gap-2">
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                    اضغط على أي رغبة واسحبها للأعلى أو الأسفل، أو استخدم الأسهم الجانبية لتغيير ترتيبها حسب أولويتك.
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2 min-h-[300px] border-2 border-dashed border-slate-200 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400">
+                                مساحة صورة: قائمة الرغبات المرتبة
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div id="step-4" class="step-content space-y-8">
+                <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl flex items-center justify-between relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-black mb-2 text-[#c21139]">نصائح استراتيجية للقبول</h2>
+                        <p class="text-slate-300 text-sm">كيف ترفع فرصك وتتجنب أخطاء الرفض الشائعة</p>
+                    </div>
+                    <i data-lucide="alert-octagon" class="w-24 h-24 text-[#c21139] opacity-20 absolute -left-6 -bottom-6"></i>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Tip 1 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-[#c21139]/10 text-[#c21139] rounded-2xl flex items-center justify-center mb-4">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">1. العدد واللغة</h3>
+                        <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                            <li>اختر <strong>12 جامعة</strong> كاملة لزيادة الفرص.</li>
+                            <li>تجنب الجامعات التي تطلب <span class="text-red-600 font-bold">TOEFL/GRE</span> إذا لم تكن تملك الشهادة (انتبه لعلامة <span class="bg-red-100 text-red-600 px-1 rounded text-xs">!</span>).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tip 2 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">2. التوزيع الجغرافي</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">قلل من اختيار المدن الكبرى (<span class="font-bold">إسطنبول، أنقرة، إزمير</span>). اجعلها أقل من نصف قائمة رغباتك لأن المنافسة فيها شرسة.</p>
+                    </div>
+
+                    <!-- Tip 3 -->
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                                <i data-lucide="book-open" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900">3. التناسق وعدم التشتت</h3>
+                        </div>
+                        <p class="text-sm text-slate-600">ركز على تخصصات متقاربة (رغبتين أو ثلاث بحد أقصى) ووزعها على جامعات مختلفة. التشتت بين تخصصات لا علاقة لها ببعضها يضعف ملفك.</p>
+                    </div>
+                </div>
+
+                <!-- Warning -->
+                <div class="bg-red-50 p-8 rounded-3xl border-2 border-red-100 flex flex-col md:flex-row gap-8 items-center">
+                    <div class="flex-1 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="x-circle" class="text-[#c21139] w-8 h-8"></i>
+                            <h3 class="text-2xl font-black text-[#c21139]">تحذير هام جداً</h3>
+                        </div>
+                        <p class="font-bold text-slate-800">لا تفعل خيار: "أوافق على دخول ما تراه إدارتكم مناسباً..."</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">تفعيل هذا الخيار يعطي انطباعاً بأنك <strong>متردد ولست صاحب هدف محدد</strong>، مما قد يؤدي لرفضك. اتركه فارغاً تماماً.</p>
+                    </div>
+                    <div class="md:w-1/3 w-full bg-white p-4 rounded-xl border border-slate-200 opacity-70 grayscale">
+                        <div class="flex items-center gap-3 select-none">
+                            <div class="w-6 h-6 border-2 border-slate-300 rounded bg-white"></div>
+                            <div class="space-y-2 flex-1">
+                                <div class="h-2 bg-slate-200 rounded w-full"></div>
+                                <div class="h-2 bg-slate-200 rounded w-2/3"></div>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-center text-xs font-bold text-red-500">❌ لا تضغط هنا</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer Nav -->
+        <footer class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-6 bg-[#1a1a1a]/90 backdrop-blur-xl px-8 py-4 rounded-full shadow-2xl border border-white/10 z-50 text-white w-[90%] md:w-auto justify-between md:justify-center">
+            <button onclick="changeStep(-1)" class="flex items-center gap-2 hover:text-[#c21139] disabled:opacity-30 transition-colors" id="prev-btn">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                <span class="text-sm font-bold">السابق</span>
+            </button>
+            
+            <div class="text-sm font-mono text-slate-400 bg-white/10 px-3 py-1 rounded-full" id="step-counter">1 / 4</div>
+
+            <button onclick="changeStep(1)" class="flex items-center gap-2 hover:text-[#c21139] disabled:opacity-30 transition-colors" id="next-btn">
+                <span class="text-sm font-bold">التالي</span>
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+        </footer>
+
+    </div>
+
+    <script>
+        // تهيئة الأيقونات
+        lucide.createIcons();
+
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function goToStep(step) {
+            currentStep = step;
+            updateUI();
+        }
+
+        function changeStep(direction) {
+            if (direction === 1 && currentStep < totalSteps) {
+                currentStep++;
+            } else if (direction === -1 && currentStep > 1) {
+                currentStep--;
+            }
+            updateUI();
+        }
+
+        function updateUI() {
+            // إخفاء كل المحتوى
+            document.querySelectorAll('.step-content').forEach(el => el.classList.remove('active'));
+            // إظهار المحتوى الحالي
+            document.getElementById(`step-${currentStep}`).classList.add('active');
+
+            // تحديث الأزرار العلوية
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = "nav-btn flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap text-slate-500 hover:text-slate-700 hover:bg-white/50";
+            });
+            const activeBtn = document.getElementById(`btn-${currentStep}`);
+            activeBtn.className = "nav-btn active flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold transition-all whitespace-nowrap bg-white text-[#c21139] shadow-md ring-1 ring-slate-100";
+
+            // تحديث الفوتر
+            document.getElementById('step-counter').innerText = `${currentStep} / ${totalSteps}`;
+            document.getElementById('prev-btn').disabled = currentStep === 1;
+            document.getElementById('next-btn').disabled = currentStep === totalSteps;
+            
+            // إعادة التمرير للأعلى
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
